@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hand Shake RPS Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="light">
+    <div class="container">
+      <!-- Game Stats Section -->
+      <div class="game-stats">
+        <h3>📊 Game Stats</h3>
+        <div class="stats-cards">
+          <div class="stat-card">
+            <h4>👤 You</h4>
+            <div class="stat-row">
+              <span>✅ Wins:</span><span id="user-wins">0</span>
+            </div>
+            <div class="stat-row">
+              <span>❌ Losses:</span><span id="user-losses">0</span>
+            </div>
+            <div class="stat-row">
+              <span>➖ Draws:</span><span id="user-draws">0</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <h4>💻 Computer</h4>
+            <div class="stat-row">
+              <span>✅ Wins:</span><span id="comp-wins">0</span>
+            </div>
+            <div class="stat-row">
+              <span>❌ Losses:</span><span id="comp-losses">0</span>
+            </div>
+            <div class="stat-row">
+              <span>➖ Draws:</span><span id="comp-draws">0</span>
+            </div>
+          </div>
+        </div>
+        <button class="reset-btn" onclick="resetStats()">🔁 Reset Stats</button>
+        <button id="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+      </div>
+
+      <!-- Game Section -->
+      <div class="game-container">
+        <h1>🤝 Rock Paper Scissors Game 🤝</h1>
+        <div class="hands">
+          <div class="hand player" id="player-hand">✊</div>
+          <div class="hand computer" id="computer-hand">✊</div>
+        </div>
+
+        <div class="buttons">
+          <button onclick="playGame('rock')">✊ Rock</button>
+          <button onclick="playGame('paper')">✋ Paper</button>
+          <button onclick="playGame('scissors')">✌️ Scissors</button>
+        </div>
+
+        <h2 id="result">Choose your move!</h2>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  color: white;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Light Theme */
+body.light {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+}
+
+/* Dark Theme */
+body.dark {
+  background: linear-gradient(to right, #555, #222);
+  color: white;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.game-stats {
+  width: 25%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border-radius: 20px;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.game-container {
+  width: 75%;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  margin: 1rem;
+}
+
+.hands {
+  display: flex;
+  justify-content: space-around;
+  font-size: 5rem;
+  margin: 2rem 0;
+}
+
+.hand {
+  transition: transform 0.3s;
+}
+
+.shake {
+  animation: shake 1s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(0); }
+  20% { transform: rotate(-20deg); }
+  40% { transform: rotate(20deg); }
+  60% { transform: rotate(-10deg); }
+  80% { transform: rotate(10deg); }
+}
+
+.buttons button {
+  background: white;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buttons button:hover {
+  background: #ffdd57;
+}
+
+.stats-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 150px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: left;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.stat-card:hover {
+  transform: scale(1.01);
+  background: #4facfe;
+}
+
+.stat-card h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.reset-btn, #theme-toggle {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.reset-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.reset-btn:hover {
+  background-color: #ff1a1a;
+}
+
+#theme-toggle {
+  background-color: #ffdd57;
+  color: black;
+  margin-top: 1rem;
+}
+
+#theme-toggle:hover {
+  background-color: #ffcd00;
+  color: black;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
